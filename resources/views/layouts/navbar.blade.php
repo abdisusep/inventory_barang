@@ -15,10 +15,10 @@
             <i class="fa-solid fa-angle-down"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ route('barang.index') }}">Barang</a></li>
-            <li><a class="dropdown-item" href="{{ route('jenis_barang.index') }}">Jenis Barang</a></li>
-            <li><a class="dropdown-item" href="{{ route('satuan.index') }}">Satuan</a></li>
-            <li><a class="dropdown-item" href="{{ route('supplier.index') }}">Supplier</a></li>
+            <li><a class="dropdown-item loading" href="{{ route('barang.index') }}">Barang</a></li>
+            <li><a class="dropdown-item loading" href="{{ route('jenis_barang.index') }}">Jenis Barang</a></li>
+            <li><a class="dropdown-item loading" href="{{ route('satuan.index') }}">Satuan</a></li>
+            <li><a class="dropdown-item loading" href="{{ route('supplier.index') }}">Supplier</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -27,8 +27,8 @@
             <i class="fa-solid fa-angle-down"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ route('barang_masuk.create') }}">Barang Masuk</a></li>
-            <li><a class="dropdown-item" href="{{ route('barang_keluar.create') }}">Barang Keluar</a></li>
+            <li><a class="dropdown-item loading" href="{{ route('barang_masuk.create') }}">Barang Masuk</a></li>
+            <li><a class="dropdown-item loading" href="{{ route('barang_keluar.create') }}">Barang Keluar</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
@@ -37,12 +37,13 @@
             <i class="fa-solid fa-angle-down"></i>
           </a>
           <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="{{ route('barang_masuk.index') }}">Barang Masuk</a></li>
-            <li><a class="dropdown-item" href="{{ route('barang_keluar.index') }}">Barang Keluar</a></li>
+            <li><a class="dropdown-item loading" href="{{ route('barang.report') }}">Stok Barang</a></li>
+            <li><a class="dropdown-item loading" href="{{ route('barang_masuk.index') }}">Barang Masuk</a></li>
+            <li><a class="dropdown-item loading" href="{{ route('barang_keluar.index') }}">Barang Keluar</a></li>
           </ul>
         </li>
         <li class="nav-item nav-logout">
-          <a class="nav-link bg-light text-danger rounded" href="{{ route('logout') }}"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
+          <a class="nav-link bg-light text-danger rounded logout ps-3 pe-3" href="#"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout</a>
         </li>
         
       </ul>

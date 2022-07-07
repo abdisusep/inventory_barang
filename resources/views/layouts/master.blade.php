@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap5.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 </head>
 <body class="bg-light">
+
     <div class="mb-4">
         @yield('navbar')
     </div>
@@ -34,17 +36,39 @@
     <script src="{{ asset('js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('js/dataTables.bootstrap5.min.js') }}"></script>
     <script src="{{ asset('js/sweetalert2.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
     <script>
         $(document).ready( function () {
             $('.datatable').DataTable();
 
+            $('.logout').click(() => {
+                Swal.fire({
+                    text: "Yakin ingin logout ?",
+                    icon: 'question',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Ya, logout!',
+                    showClass: {
+                        popup: 'animate__animated animate__fadeIn'
+                    },
+                    hideClass: {
+                        popup: 'animate__animated animate__fadeOut'
+                    }
+                }).then((result) => {
+                if (result.isConfirmed) {
+                    // LoadingShow();
+                    window.location.href = "{{ route('logout') }}";
+                }
+                });
+            });
+
             @if(session('success'))
-            Swal.fire({
-                icon: "success",
-                html: "{{ session('message') }}",
-                showConfirmButton: false,
-                timer: 2200
-            })
+            alertMessage("success", "{{ session('message') }}")
+            @endif
+            
+            @if(session('failed'))
+            alertMessage("error", "{{ session('message') }}")
             @endif
         } );
     </script>

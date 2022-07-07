@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="mb-3">
-    <a href="{{ route('satuan.create') }}" class="btn btn-light btn-sm"><i class="fa-solid fa-plus"></i> Tambah</a>
+    <a href="{{ route('satuan.create') }}" class="btn btn-light btn-sm loading"><i class="fa-solid fa-plus"></i> Tambah</a>
 </div>
 <div>
 <table class="table table-bordered datatable">
@@ -25,7 +25,7 @@
                 @csrf
                 @method('DELETE')
                 <a href="{{ route('satuan.edit', $sat->id) }}" class="btn btn-outline-warning btn-sm"><i class="fa-solid fa-edit"></i></a>
-                <button type="submit" class="btn btn-outline-danger btn-sm" onclick="confirm('Yakin hapus?')"><i class="fa-solid fa-trash"></i></button>
+                <button type="submit" class="btn btn-outline-danger btn-sm loading"><i class="fa-solid fa-trash"></i></button>
             </form>
         </td>
     </tr>

@@ -53,6 +53,32 @@ const alertMessage = (type, message) => {
         icon: `${type}`,
         html: `${message}`,
         showConfirmButton: false,
+        showClass: {
+            popup: 'animate__animated animate__fadeIn'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOut'
+        },
         timer: 2400
+    })
+}
+
+$('.loading').click(() => {
+    LoadingShow();
+});
+
+const LoadingShow = () => {
+    Swal.fire({
+        customClass: 'swal-loading',
+        showClass: {
+            popup: 'animate__animated animate__fadeIn'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOut'
+        },
+        html: 'Loading',
+        didOpen: () => {
+            Swal.showLoading()
+        },
     })
 }

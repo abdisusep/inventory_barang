@@ -14,7 +14,7 @@
   <div class="mb-3 row">
     <label class="col-sm-2 col-form-label">Tanggal Masuk</label>
     <div class="col-sm-5">
-      <input type="date" class="form-control" name="tanggal">
+      <input type="date" class="form-control" name="tanggal" value="{{ old('tanggal') }}">
       @error('tanggal')<small class="text-danger">{{ $message }}</small> @enderror
     </div>
   </div>
@@ -34,7 +34,7 @@
   <div class="mb-3 row">
     <label class="col-sm-2 col-form-label">Jumlah</label>
     <div class="col-sm-5">
-      <input type="number" class="form-control" name="jumlah">
+      <input type="number" class="form-control" name="jumlah" value="{{ old('jumlah') }}">
       @error('jumlah')<small class="text-danger">{{ $message }}</small> @enderror
     </div>
   </div>
@@ -42,14 +42,14 @@
   <div class="mb-3 row">
     <label class="col-sm-2 col-form-label">Tujuan Kirim</label>
     <div class="col-sm-5">
-      <input type="text" class="form-control" name="tujuan">
+      <input type="text" class="form-control" name="tujuan" value="{{ old('tujuan') }}">
       @error('tujuan')<small class="text-danger">{{ $message }}</small> @enderror
     </div>
   </div>
   
   <div class="mb-3 row">
     <div class="col-sm-5 offset-sm-2">
-      <button class="btn btn-primary">Simpan</button>
+      <button class="btn btn-primary loading">Simpan</button>
     </div>
   </div>
   

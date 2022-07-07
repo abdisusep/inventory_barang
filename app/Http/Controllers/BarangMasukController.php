@@ -11,7 +11,7 @@ class BarangMasukController extends Controller
 {
     public function index()
     {
-        $data['barang_masuk'] = BarangMasuk::orderBy('tanggal','desc')->get();
+        $data['barang_masuk'] = BarangMasuk::orderBy('created_at','desc')->get();
         $data['supplier'] = Supplier::all();
         return view('transaksi.barang_masuk.index', $data);
     }
@@ -29,7 +29,7 @@ class BarangMasukController extends Controller
             'kode_transaksi' => 'required',
             'kode_barang' => 'required',
             'pengirim' => 'required',
-            'jumlah' => 'required',
+            'jumlah' => 'required|numeric|min:1',
             'tanggal' => 'required',
         ]);
 

@@ -4,7 +4,7 @@
 
 @section('content')
 <div class="mb-3">
-    <a href="{{ route('satuan.index') }}" class="btn btn-light btn-sm"><i class="fa-solid fa-angle-left"></i> Kembali</a>
+    <a href="{{ route('satuan.index') }}" class="btn btn-light btn-sm loading"><i class="fa-solid fa-angle-left"></i> Kembali</a>
 </div>
 <form action="{{ route('satuan.update', $satuan->id) }}" method="POST">
   @csrf
@@ -19,7 +19,7 @@
   
   <div class="mb-3 row">
     <div class="col-sm-5 offset-sm-2">
-      <button class="btn btn-primary">Udpate</button>
+      <button class="btn btn-primary loading">Udpate</button>
     </div>
   </div>
   

@@ -45,9 +45,10 @@ class BarangController extends Controller
         }
     }
 
-    public function show(Barang $barang)
+    public function report(Barang $barang)
     {
-        return view('barang.create');
+        $data['barang'] = Barang::all();
+        return view('barang.report', $data);
     }
 
     public function edit(Barang $barang)

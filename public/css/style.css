@@ -71,3 +71,20 @@
         margin-left: 0;
     }
 }
+
+.swal-loading{
+    width: 250px !important;
+    opacity: 0.9 !important;
+}
+
+.swal2-styled.swal2-cancel{
+    border-radius: 9px !important;
+    box-shadow: none !important;
+    padding:8px 12px 8px 12px !important;
+}
+
+.swal2-styled.swal2-confirm{
+    border-radius: 9px !important;
+    box-shadow: none !important;
+    padding:8px 12px 8px 12px !important;
+}

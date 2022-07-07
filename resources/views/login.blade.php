@@ -14,6 +14,12 @@
     <link rel="stylesheet" href="{{ asset('css/animate.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('css/login.css') }}"/>
+    <style>
+        .swal-loading{
+            width: 250px !important;
+            opacity: 0.9 !important;
+        }
+    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -31,14 +37,19 @@
                         <h3 class="m-0 fw-600 animate__animated animate__fadeInDown">Login User</h3>
                         <p class="fs-14 fw-500 animate__animated animate__fadeInDown">PT. Teodore Pan Garmindo</p>
                     </div>
-                    <div class="input-group mb-3 animate__animated animate__fadeInDown">
+                    <div class="input-group animate__animated animate__fadeInDown">
                         <span class="input-group-text"><i class="fa-solid fa-at"></i></span>
                         <div class="form-floating flex-grow-1">
-                            <input type="email" class="form-control rounded-right" name="email" id="email" placeholder="Email" oninput="isEmpty()">
+                            <input type="text" class="form-control rounded-right" name="email" id="email" value="{{ old('email') }}" placeholder="Email" oninput="isEmpty()">
                             <label for="email">Email</label>
                         </div>
                     </div>
-                    <div class="input-group mb-3 animate__animated animate__fadeInDown">
+                    @error('email')
+                    <div class="animate__animated animate__fadeInDown">
+                        <small class="text-danger">{{ $message }}</small>
+                    </div>
+                    @enderror
+                    <div class="input-group mt-3 animate__animated animate__fadeInDown">
                         <span class="input-group-text"><i class="fa-solid fa-lock"></i></span>
                         <div class="form-floating flex-grow-1">
                             <input type="password" class="form-control rounded-right" name="password" id="password" placeholder="Password" oninput="isEmpty()">
@@ -50,7 +61,7 @@
                     </div>
                     
                     <div class="mt-5 animate__animated animate__fadeInDown">
-                        <button class="btn btn-primary w-100 fw-500" type="submit" id="btnSubmit" disabled>
+                        <button class="btn btn-primary w-100 fw-500 loading" type="submit" id="btnSubmit" disabled>
                             <span id="textLogin">Login</span>
                             <img src="{{ asset('images/loading.gif') }}" class="loader d-none" width="30px" height="30px" alt="Loader">
                         </button>
@@ -66,7 +77,7 @@
     <script src="{{ asset('js/script.js') }}"></script>
     @if(session('login'))
         <script>
-            alertMessage('error', "{{ session('login') }}");
+            alertMessage("error", "{{ session('login') }}");
         </script>
     @endif
 </body>

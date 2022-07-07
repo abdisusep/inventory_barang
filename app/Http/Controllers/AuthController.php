@@ -27,7 +27,7 @@ class AuthController extends Controller
             return redirect()->intended('dashboard');
         }
  
-        return back()->with(['login'=>'Gagal login!']);
+        return back()->with(['login'=>'Gagal login!'])->withInput();
     }
 
     public function logout(Request $request)
