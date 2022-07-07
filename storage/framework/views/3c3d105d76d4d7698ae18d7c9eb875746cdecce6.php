@@ -33,7 +33,6 @@
           <td><?php echo e($brgk->tanggal); ?></td>
       </tr>
       <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
-      
     </tbody>
   </table>
 </div>

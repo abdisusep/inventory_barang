@@ -48,6 +48,11 @@ const Loading = (value) => {
     }
 }
 
+$('#btnSubmit').click(() => {
+    $("#loginForm").submit();
+    Loading(true);
+});
+
 const alertMessage = (type, message) => {
     Swal.fire({
         icon: `${type}`,

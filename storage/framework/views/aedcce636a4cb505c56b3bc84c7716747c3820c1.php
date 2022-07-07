@@ -14,12 +14,6 @@
     <link rel="stylesheet" href="<?php echo e(asset('css/animate.min.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('css/all.min.css')); ?>">
     <link rel="stylesheet" href="<?php echo e(asset('css/login.css')); ?>"/>
-    <style>
-        .swal-loading{
-            width: 250px !important;
-            opacity: 0.9 !important;
-        }
-    </style>
 </head>
 <body>
     <div class="container-fluid">
@@ -40,7 +34,7 @@
                     <div class="input-group animate__animated animate__fadeInDown">
                         <span class="input-group-text"><i class="fa-solid fa-at"></i></span>
                         <div class="form-floating flex-grow-1">
-                            <input type="text" class="form-control rounded-right" name="email" id="email" value="<?php echo e(old('email')); ?>" placeholder="Email" oninput="isEmpty()">
+                            <input type="email" class="form-control rounded-right" name="email" id="email" value="<?php echo e(old('email')); ?>" placeholder="Email" oninput="isEmpty()">
                             <label for="email">Email</label>
                         </div>
                     </div>
@@ -66,9 +60,8 @@ unset($__errorArgs, $__bag); ?>
                             <i class="fa-solid fa-eye"></i>
                         </span>
                     </div>
-                    
                     <div class="mt-5 animate__animated animate__fadeInDown">
-                        <button class="btn btn-primary w-100 fw-500 loading" type="submit" id="btnSubmit" disabled>
+                        <button class="btn btn-primary w-100 fw-500" type="submit" id="btnSubmit" disabled>
                             <span id="textLogin">Login</span>
                             <img src="<?php echo e(asset('images/loading.gif')); ?>" class="loader d-none" width="30px" height="30px" alt="Loader">
                         </button>

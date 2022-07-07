@@ -33,7 +33,6 @@
           <td>{{ $brgm->tanggal }}</td>
       </tr>
       @endforeach
-      
     </tbody>
   </table>
 </div>

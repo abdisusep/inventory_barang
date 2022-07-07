@@ -3,5 +3,5 @@
 @section('title', 'Dashboard')
 
 @section('content')
-<h4>Selamat Datang {{ Auth::user()->name }}</h4>
+<p class="m-0 fs-14">Selamat Datang <b>{{ Auth::user()->name }}</b></p>
 @endsection

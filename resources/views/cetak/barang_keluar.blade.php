@@ -27,7 +27,7 @@
         <td>{{ $brgk->kode_transaksi }}</td>
         <td>{{ $brgk->kode_barang }}</td>
         <td>{{ $brgk->nama_barang }}</td>
-        <td>{{ $brgk->pengirim }}</td>
+        <td>{{ $brgk->tujuan }}</td>
         <td>{{ $brgk->jumlah }} {{ $brgk->satuan }}</td>
         <td>{{ $brgk->tanggal }}</td>
     </tr>
