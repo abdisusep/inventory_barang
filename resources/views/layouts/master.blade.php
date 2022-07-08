@@ -57,7 +57,7 @@
                     }
                 }).then((result) => {
                 if (result.isConfirmed) {
-                    // LoadingShow();
+                    LoadingShow();
                     window.location.href = "{{ route('logout') }}";
                 }
                 });
